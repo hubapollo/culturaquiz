@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Cultura Organizacional</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h2 {
+            margin: 0 0 10px;
+        }
+
+        .question ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .question li {
+            margin-bottom: 10px;
+        }
+
+        .question label {
+            display: block;
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .question label:hover {
+            background-color: #d0d0d0;
+        }
+
+        .question input[type="radio"] {
+            display: none;
+        }
+
+        .question input[type="radio"]:checked + label {
+            background-color: #c0c0c0;
+        }
+
+        #submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+
+        #submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h1>Quiz de Cultura Organizacional</h1>
+        <form id="quiz-form">
+            <div class="question" id="question1">
+                <h2>1. Lançamento de um Novo Produto</h2>
+                <ul>
+                    <li><input type="radio" id="q1a" name="q1" value="A"><label for="q1a">A: Encorajo a equipe a
+                            experimentar novas abordagens e tecnologias, mesmo que isso signifique alguns erros no
+                            caminho.</label></li>
+                    <li><input type="radio" id="q1b" name="q1" value="B"><label for="q1b">B: Insisto que a equipe
+                            colabore estreitamente e se sinta confortável para compartilhar ideias e preocupações.</label>
+                    </li>
+                    <li><input type="radio" id="q1c" name="q1" value="C"><label for="q1c">C: Peço à equipe que siga
+                            procedimentos bem definidos para garantir que tudo saia conforme planejado.</label></li>
+                    <li><input type="radio" id="q1d" name="q1" value="D"><label for="q1d">D: Foco na garantia de que o
+                            produto final atenda aos mais altos padrões de qualidade e detalhamento.</label></li>
+                </ul>
+            </div>
+
+            <div class="question" id="question2">
+                <h2>2. Resolução de um Problema Urgente com um Cliente</h2>
+                <ul>
+                    <li><input type="radio" id="q2a" name="q2" value="A"><label for="q2a">A: Mobilizo a equipe para
+                            resolver o problema rapidamente, priorizando a velocidade da resposta.</label></li>
+                    <li><input type="radio" id="q2b" name="q2" value="B"><label for="q2b">B: Garanto que a equipe
+                            trabalhe junta, permitindo que todos contribuam com suas ideias para a solução.</label></li>
+                    <li><input type="radio" id="q2c" name="q2" value="C"><label for="q2c">C: Sigo o protocolo
+                            estabelecido para garantir que o problema seja resolvido corretamente e de forma
+                            consistente.</label></li>
+                    <li><input type="radio" id="q2d" name="q2" value="D"><label for="q2d">D: Asseguro que a solução
+                            proposta não só resolva o problema, mas também exceda as expectativas do cliente em termos
+                            de qualidade.</label></li>
+                </ul>
+            </div>
+
+            <div class="question" id="question3">
+                <h2>3. Planejamento de um Projeto a Longo Prazo</h2>
+                <ul>
+                    <li><input type="radio" id="q3a" name="q3" value="A"><label for="q3a">A: Incentivo a equipe a
+                            explorar novas ideias e métodos inovadores para garantir que o projeto seja pioneiro.</label>
+                    </li>
+                    <li><input type="radio" id="q3b" name="q3" value="B"><label for="q3b">B: Promovo um ambiente onde
+                            todos se sintam seguros para expressar suas opiniões e assumir riscos calculados.</label></li>
+                    <li><input type="radio" id="q3c" name="q3" value="C"><label for="q3c">C: Estabeleço um plano
+                            detalhado com etapas claras e responsabilidades bem definidas para cada membro da
+                            equipe.</label></li>
+                    <li><input type="radio" id="q3d" name="q3" value="D"><label for="q3d">D: Insisto que cada etapa do
+                            projeto seja realizada com a máxima atenção aos detalhes e qualidade.</label></li>
+                </ul>
+            </div>
+
+            <div class="question" id="question4">
+                <h2>4. Implementação de um Novo Sistema Interno</h2>
+                <ul>
+                    <li><input type="radio" id="q4a" name="q4" value="A"><label for="q4a">A: Encorajo a rápida
+                            implementação para que possamos começar a ver os benefícios o quanto antes.</label></li>
+                    <li><input type="radio" id="q4b" name="q4" value="B"><label for="q4b">B: Facilito discussões em
+                            grupo para garantir que todos entendam o sistema e se sintam confortáveis com as
+                            mudanças.</label></li>
+                    <li><input type="radio" id="q4c" name="q4" value="C"><label for="q4c">C: Sigo um cronograma rigoroso
+                            e instruo a equipe a aderir a todos os procedimentos de treinamento.</label></li>
+                    <li><input type="radio" id="q4d" name="q4" value="D"><label for="q4d">D: Foco em garantir que o
+                            sistema seja configurado e usado da maneira mais eficaz e eficiente possível, priorizando a
+                            excelência.</label></li>
+                </ul>
+            </div>
+
+            <div class="question" id="question5">
+                <h2>5. Avaliação de Desempenho dos Funcionários</h2>
+                <ul>
+                    <li><input type="radio" id="q5a" name="q5" value="A"><label for="q5a">A: Encorajo o feedback aberto e
+                            a discussão sobre inovações e melhorias pessoais.</label></li>
+                    <li><input type="radio" id="q5b" name="q5" value="B"><label for="q5b">B: Enfatizo a importância do
+                            feedback mútuo e apoio para o crescimento dos colegas.</label></li>
+                    <li><input type="radio" id="q5c" name="q5" value="C"><label for="q5c">C: Uso métricas claras e
+                            procedimentos para avaliar o desempenho conforme os padrões estabelecidos.</label></li>
+                    <li><input type="radio" id="q5d" name="q5" value="D"><label for="q5d">D: Foco em resultados e
+                            recompenso aqueles que superam os objetivos estabelecidos.</label></li>
+                </ul>
+            </div>
+
+            <div class="question" id="question6">
+                <h2>6. Reestruturação Organizacional</h2>
+                <ul>
+                    <li><input type="radio" id="q6a" name="q6" value="A"><label for="q6a">A: Busco novas maneiras de
+                            otimizar a estrutura, incentivando inovações.</label></li>
+                    <li><input type="radio" id="q6b" name="q6" value="B"><label for="q6b">B: Asseguro que todos os
+                            membros da equipe estejam envolvidos e confortáveis com as mudanças.</label></li>
+                    <li><input type="radio" id="q6c" name="q6" value="C"><label for="q6c">C: Implemento um plano
+                            detalhado que estabelece novas funções e responsabilidades.</label></li>
+                    <li><input type="radio" id="q6d" name="q6" value="D"><label for="q6d">D: Avalio o desempenho atual e
+                            ajusto as funções com base nos resultados e eficiências.</label></li>
+                </ul>
+            </div>
+
+            <div class="question" id="question7">
+                <h2>7. Treinamento e Desenvolvimento de Equipe</h2>
+                <ul>
+                    <li><input type="radio" id="q7a" name="q7" value="A"><label for="q7a">A: Ofereço oportunidades para
+                            aprender através de novas experiências e projetos inovadores.</label></li>
+                    <li><input type="radio" id="q7b" name="q7" value="B"><label for="q7b">B: Foco no treinamento
+                            colaborativo e desenvolvimento de habilidades de equipe.</label></li>
+                    <li><input type="radio" id="q7c" name="q7" value="C"><label for="q7c">C: Estabeleço um currículo
+                            estruturado que cobre todas as habilidades necessárias.</label></li>
+                    <li><input type="radio" id="q7d" name="q7" value="D"><label for="q7d">D: Insisto em programas que
+                            aprimorem as habilidades com foco em resultados tangíveis.</label></li>
+                </ul>
+            </div>
+
+            <div class="question" id="question8">
+                <h2>8. Introdução de uma Nova Política de Trabalho Remoto</h2>
+                <ul>
+                    <li><input type="radio" id="q8a" name="q8" value="A"><label for="q8a">A: Dou liberdade para que as
+                            equipes experimentem diferentes arranjos e vejam o que funciona melhor.</label></li>
+                    <li><input type="radio" id="q8b" name="q8" value="B"><label for="q8b">B: Asseguro que a política
+                            reflita o bem-estar e a colaboração da equipe.</label></li>
+                    <li><input type="radio" id="q8c" name="q8" value="C"><label for="q8c">C: Implemento diretrizes claras
+                            e métricas para medir a produtividade e adesão.</label></li>
+                    <li><input type="radio" id="q8d" name="q8" value="D"><label for="q8d">D: Avalio o impacto na
+                            produtividade e ajusto a política conforme os resultados.</label></li>
+                </ul>
+            </div>
+
+            <div class="question" id="question9">
+                <h2>9. Lançamento de uma Campanha de Marketing</h2>
+                <ul>
+                    <li><input type="radio" id="q9a" name="q9" value="A"><label for="q9a">A: Encorajo a equipe a testar
+                            ideias criativas e não convencionais.</label></li>
+                    <li><input type="radio" id="q9b" name="q9" value="B"><label for="q9b">B: Asseguro que todos tenham a
+                            chance de colaborar e contribuir com suas ideias.</label></li>
+                    <li><input type="radio" id="q9c" name="q9" value="C"><label for="q9c">C: Sigo um plano detalhado com
+                            prazos claros e metas definidas.</label></li>
+                    <li><input type="radio" id="q9d" name="q9" value="D"><label for="q9d">D: Foco em atingir o maior
+                            impacto possível e medir o sucesso com precisão.</label></li>
+                </ul>
+            </div>
+
+            <div class="question" id="question10">
+                <h2>10. Feedback dos Clientes e Melhorias</h2>
+                <ul>
+                    <li><input type="radio" id="q10a" name="q10" value="A"><label for="q10a">A: Uso o feedback para
+                            inspirar novas ideias e inovações no produto.</label></li>
+                    <li><input type="radio" id="q10b" name="q10" value="B"><label for="q10b">B: Encorajo a equipe a
+                            colaborar em soluções que atendam melhor às necessidades dos clientes.</label></li>
+                    <li><input type="radio" id="q10c" name="q10" value="C"><label for="q10c">C: Sigo um processo
+                            estruturado para coletar, analisar e implementar melhorias.</label></li>
+                    <li><input type="radio" id="q10d" name="q10" value="D"><label for="q10d">D: Avalio quais sugestões
+                            têm maior potencial para aumentar a eficiência e os resultados.</label></li>
+                </ul>
+            </div>
+
+            <button type="button" id="submit-btn" onclick="calculateResult()">Ver Resultado</button>
+        </form>
+
+        <div id="result" style="display: none;">
+            <h2>Resultado</h2>
+            <p id="result-text"></p>
+        </div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            // Inicializa as pontuações
+            let scores = {
+                A: 0,
+                B: 0,
+                C: 0,
+                D: 0
+            };
+
+            // Captura as respostas
+            const form = document.getElementById('quiz-form');
+            const formData = new FormData(form);
+
+            // Conta as respostas
+            for (let entry of formData.entries()) {
+                scores[entry[1]]++;
+            }
+
+            // Determina o tipo de cultura dominante
+            const maxScore = Math.max(scores.A, scores.B, scores.C, scores.D);
+            let dominantCulture = '';
+
+            if (scores.A === maxScore) {
+                dominantCulture = "Flexibilidade + Independência (Aprendizado e Prazer): Foco em inovação, agilidade e autonomia.";
+            } else if (scores.B === maxScore) {
+                dominantCulture = "Flexibilidade + Dependência (Propósito e Acolhimento): Ênfase em colaboração, apoio e envolvimento pessoal.";
+            } else if (scores.C === maxScore) {
+                dominantCulture = "Estabilidade + Dependência (Ordem e Segurança): Valorização da ordem, procedimentos e previsibilidade.";
+            } else if (scores.D === maxScore) {
+                dominantCulture = "Estabilidade + Independência (Resultado e Autoridade): Busca por eficiência, controle e excelência.";
+            }
+
+            // Exibe o resultado
+            document.getElementById('result-text').innerText = dominantCulture;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
